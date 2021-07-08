@@ -1,0 +1,137 @@
+<Label>
+   # font_size: 40
+    #background_color: (0, 0, 1, 1)
+    #canvas.before:
+       # Color:
+         #   rgba: self.background_color
+       # Rectangle:
+        #    size: self.size
+        #    pos: self.pos
+    #color: (1, 0, 0, 1)
+   # bold: True
+    #italic: True
+   # outline_color: (0, 0, 0)
+    #outline_width: 6
+
+<Button>
+    font_size: 32
+    #background_color: (1, 1, 1, 1)
+    #color: (1, 1, 1, 1)
+
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        cols: 1
+        Label:
+            text: "Some text"
+            id: numberLabel
+            font_size: 60
+            text_size: self.size
+            halign: "right"
+            size_hint: (1, .3)
+
+        GridLayout:
+            size: root.width, root.height
+            buttonC: buttonC
+            #spacing: 10
+            #padding: 10
+
+            cols: 4
+            rows: 5
+
+            Button:
+                text: "C"
+                id: buttonC
+                on_press: root.buttonClearPress()
+            Button:
+                text: "X^2"
+                id: buttonSquare
+                on_press: root.buttonSquarePress()
+            Button:
+                text: "X^0.5"
+                id: buttonSqrt
+                on_press: root.buttonSqrtPress()
+            Button:
+                text: "/"
+                id: buttonDiv
+                on_press: root.buttonDivPress()
+
+            Button:
+                text: "7"
+                id: button7
+                on_press: root.button7Press()
+            Button:
+                text: "8"
+                id: button8
+                on_press: root.button8Press()
+            Button:
+                text: "9"
+                id: button9
+                on_press: root.button9Press()
+            Button:
+                text: "*"
+                id: buttonMult
+                on_press: root.buttonMultPress()
+
+            Button:
+                text: "4"
+                id: button4
+                on_press: root.button4Press()
+            Button:
+                text: "5"
+                id: button5
+                on_press: root.button5Press()
+            Button:
+                text: "6"
+                id: button6
+                on_press: root.button6Press()
+            Button:
+                text: "-"
+                id: buttonMin
+                on_press: root.buttonMinPress()
+
+            Button:
+                text: "1"
+                id: button1
+                on_press: root.button1Press()
+            Button:
+                text: "2"
+                id: button2
+                on_press: root.button2Press()
+            Button:
+                text: "3"
+                id: button3
+                on_press: root.button3Press()
+            Button:
+                text: "+"
+                id: buttonPlus
+                on_press: root.buttonPlusPress()
+
+            Button:
+                text: "+/-"
+                id: buttonChangeSign
+                on_press: root.buttonChangeSignPress()
+            Button:
+                text: "0"
+                id: button0
+                on_press: root.button0Press()
+            Button:
+                text: "."
+                id: buttonDot
+                on_press: root.buttonDotPress()
+            Button:
+                text: "="
+                id: buttonEqual
+                on_press: root.buttonEqualPress()
+
+            #Button:
+             #   text: "World!"
+              #  pos_hint: {"center_x": .5}
+               # size_hint: (.5, .5)
+                #width: 300
+                #height: 150
+            #Label:
+                #text: "Heh"
+
+
